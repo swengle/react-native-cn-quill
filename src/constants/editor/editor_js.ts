@@ -128,6 +128,22 @@ export const editor_js = `
       data: getSelectionData });
       sendMessage(getSelectionJson);
   }
+  
+  var getLeaf = function(key, index) {
+    const [leaf] = quill.getLeaf(index);
+    const leaf_index = quill.getIndex(leaf)
+    
+    const json = JSON.stringify({
+      type: "get-leaf",
+      key: key,
+      data: {
+        text: leaf.text,
+        leaf_index: leaf_index,
+        parent_node_name: leaf.parent.domNode.localName
+      }
+    });
+    sendMessage(json);
+  }
 
 
   var getRequest = function (event) {
@@ -169,6 +185,9 @@ export const editor_js = `
       case 'setSelection':
         setSelection(msg.index, msg.length, msg.source);
         break;
+      case 'getLeaf':
+        getLeaf(msg.key, msg.index);
+        break
       case 'getHtml':
         getHtml(msg.key);
         break;

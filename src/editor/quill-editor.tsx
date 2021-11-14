@@ -213,6 +213,7 @@ export default class QuillEditor extends React.Component<
       case 'get-bounds':
       case 'get-selection':
       case 'get-dimensions':
+      case 'get-leaf':
       case 'get-html':
         if (response) {
           response.resolve(message.data);
@@ -289,6 +290,10 @@ export default class QuillEditor extends React.Component<
 
   setSelection = (index: number, length?: number, source?: String) => {
     this.post({ command: 'setSelection', index, length, source });
+  };
+  
+  getLeaf = (index: number): Promise<any> => {
+    return this.postAwait<any>({ command: 'getLeaf', index });
   };
 
   insertEmbed = (index: number, type: string, value: any) => {

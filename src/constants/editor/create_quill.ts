@@ -31,7 +31,7 @@ export const create_quill = (
   var quill = new Quill('#${id}', {
     modules: {
       toolbar: ${toolbar} ,
-      ${clipboardModule}
+      ${clipboardModule} 
     },
     placeholder: '${placeholder}',
     theme: '${theme}'

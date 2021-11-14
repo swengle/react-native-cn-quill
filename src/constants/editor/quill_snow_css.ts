@@ -11,10 +11,9 @@ export const quill_snow_css = (cdn: boolean) =>
     */
    .ql-container {
      box-sizing: border-box;
-     font-family: Helvetica, Arial, sans-serif;
-     font-size: 13px;
+     font-family: -apple-system, Helvetica, Arial, sans-serif;
+     font-size: 14px;
      height: 100%;
-     margin: 0px;
      position: relative;
    }
    .ql-container.ql-disabled .ql-tooltip {
@@ -40,7 +39,7 @@ export const quill_snow_css = (cdn: boolean) =>
      height: 100%;
      outline: none;
      overflow-y: auto;
-     padding: 12px 15px;
+     padding: 8px;
      tab-size: 4;
      -moz-tab-size: 4;
      text-align: left;
@@ -395,7 +394,7 @@ export const quill_snow_css = (cdn: boolean) =>
      color: rgba(0,0,0,0.6);
      content: attr(data-placeholder);
      font-style: italic;
-     left: 15px;
+     left: 8px;
      pointer-events: none;
      position: absolute;
      right: 15px;
@@ -413,8 +412,8 @@ export const quill_snow_css = (cdn: boolean) =>
      cursor: pointer;
      display: inline-block;
      float: left;
-     height: 24px;
-     padding: 3px 5px;
+     height: 28px;
+     padding: 3px 3px;
      width: 28px;
    }
    .ql-snow.ql-toolbar button svg,
@@ -625,7 +624,8 @@ export const quill_snow_css = (cdn: boolean) =>
    }
    .ql-snow .ql-editor code,
    .ql-snow .ql-editor pre {
-     background-color: #f0f0f0;
+     font-family: Courier New;
+     background-color: "#EEE";
      border-radius: 3px;
    }
    .ql-snow .ql-editor pre {
@@ -635,12 +635,12 @@ export const quill_snow_css = (cdn: boolean) =>
      padding: 5px 10px;
    }
    .ql-snow .ql-editor code {
-     font-size: 85%;
+     font-size: 13px;
      padding: 2px 4px;
    }
    .ql-snow .ql-editor pre.ql-syntax {
-     background-color: #23241f;
-     color: #f8f8f2;
+     background-color: #EEE;
+     color: "black";
      overflow: visible;
    }
    .ql-snow .ql-editor img {

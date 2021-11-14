@@ -8,11 +8,7 @@ interface Props {
 }
 
 export const ToolbarSeperator: React.FC<Props> = ({ color }) => {
-  return (
-    <View
-      style={[styles.separator, { backgroundColor: color || defaultColor }]}
-    />
-  );
+  return null;
 };
 
 const styles = StyleSheet.create({
